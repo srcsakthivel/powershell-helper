@@ -1,0 +1,9 @@
+$url = "http://www.printable-sudoku-puzzles.com/9x9.php?t="
+$outdir = "C:\sample\Sudoku\9x9"
+
+foreach ($num in 100..200)
+{
+    $newurl = $url+$num
+    $output = "$outdir\$num.png"
+    Invoke-WebRequest -Uri $url -OutFile $output
+}
